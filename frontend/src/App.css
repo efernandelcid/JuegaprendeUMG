@@ -1,0 +1,561 @@
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #102c3a;
+  background: #e8e3d5;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+button, input, select { font: inherit; }
+
+.aplicacion {
+  display: flex;
+  min-height: 100vh;
+}
+
+.lateral {
+  width: 250px;
+  flex-shrink: 0;
+  background: #102c3a;
+  color: #fff;
+  padding: 32px 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 65px;
+}
+
+.simbolo {
+  font-size: 36px;
+  color: #f4b942;
+}
+
+.logotipo strong {
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.logotipo small {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #f4b942;
+}
+
+.menu-titulo, .numero-seccion {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.menu-titulo { color: #829da7; margin-bottom: 16px; }
+
+.navegacion { display: grid; gap: 8px; }
+
+.navegacion button {
+  text-align: left;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #b6c9ce;
+  cursor: pointer;
+}
+
+.navegacion button span { margin-right: 12px; font-size: 20px; }
+
+.navegacion button.activo {
+  background: #234654;
+  color: #f4b942;
+}
+
+.navegacion button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.lateral-inferior {
+  margin-top: auto;
+  padding: 20px;
+  background: #234654;
+  border-radius: 12px;
+}
+
+.estrella { color: #f4b942; font-size: 30px; }
+.lateral-inferior p { font-size: 13px; color: #b6c9ce; line-height: 1.5; }
+
+.zona-principal {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 23px 5%;
+  border-bottom: 1px solid #cfc9ba;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.estado { letter-spacing: 0; }
+.estado i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #4a806b;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+.inicio {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+  gap: 5%;
+  align-items: center;
+  padding: 55px 6%;
+}
+
+.presentacion { position: relative; }
+.numero-seccion { color: #4a806b; }
+
+.decoracion {
+  font-size: 100px;
+  color: #f26b4f;
+  margin: 25px 0 5px;
+  line-height: 1;
+}
+
+h1 {
+  font-size: clamp(38px, 5vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin: 15px 0 25px;
+}
+
+h1 em { color: #f26b4f; font-style: normal; }
+
+.descripcion {
+  max-width: 460px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #53646a;
+}
+
+.franja {
+  display: flex;
+  gap: 35px;
+  margin-top: 45px;
+  border-top: 2px solid #102c3a;
+  padding-top: 22px;
+}
+
+.franja div { display: grid; gap: 5px; }
+.franja strong { font-size: 34px; }
+.franja span { font-size: 12px; color: #53646a; }
+
+.mensaje {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 38px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.mensaje span { font-size: 30px; color: #f26b4f; }
+
+.panel-registro {
+  background: #fffdf6;
+  padding: 35px;
+  border: 2px solid #102c3a;
+  box-shadow: 12px 12px 0 #f4b942;
+}
+
+.panel-cabecera {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #cfc9ba;
+  padding-bottom: 15px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.avatar { font-size: 46px; margin-top: 25px; }
+
+.panel-registro h2 {
+  font-size: 35px;
+  line-height: 1.1;
+  margin: 12px 0;
+}
+
+.panel-registro > p {
+  color: #53646a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+form { margin-top: 30px; }
+label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin: 18px 0 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 13px;
+  background: transparent;
+  color: #102c3a;
+  border: 1px solid #aab8b8;
+  border-radius: 3px;
+}
+
+.campos-dobles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.boton-principal {
+  width: 100%;
+  margin-top: 25px;
+  padding: 17px;
+  border: none;
+  background: #f26b4f;
+  color: #102c3a;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boton-principal:hover { background: #f4b942; }
+
+.tablero { flex: 1; padding: 55px 6%; }
+.tablero > p { color: #53646a; }
+
+.cabecera-misiones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 45px;
+}
+
+.cabecera-misiones span { font-size: 10px; letter-spacing: 1px; }
+
+.lista-misiones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.mision { padding: 25px; min-height: 270px; }
+.mision.coral { background: #f5b3a1; }
+.mision.verde { background: #a8c5b5; }
+.mision.amarillo { background: #f4d789; }
+
+.mision-numero { font-size: 11px; font-weight: bold; letter-spacing: 2px; }
+.mision-icono { font-size: 52px; margin: 25px 0; }
+.mision h3 { font-size: 22px; margin: 0 0 10px; }
+.mision p { font-size: 13px; }
+
+.pendiente {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.boton-volver {
+  margin-top: 35px;
+  padding: 12px 20px;
+  background: #102c3a;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+footer {
+  padding: 22px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #53646a;
+}
+
+@media (max-width: 1050px) {
+  .inicio { grid-template-columns: 1fr; }
+  .presentacion { max-width: 700px; }
+}
+
+@media (max-width: 700px) {
+  .aplicacion { flex-direction: column; }
+  .lateral { width: 100%; padding: 15px 20px; }
+  .logotipo { padding-bottom: 12px; }
+  .menu-titulo, .lateral-inferior { display: none; }
+  .navegacion { display: flex; }
+  .barra-superior { flex-wrap: wrap; }
+  .inicio, .tablero { padding: 30px 5%; }
+  .panel-registro { padding: 22px; box-shadow: 6px 6px 0 #f4b942; }
+  .lista-misiones { grid-template-columns: 1fr; }
+  .cabecera-misiones { flex-direction: column; align-items: start; }
+}
+
+
+/* Botones de las misiones */
+
+.boton-mision {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 13px 20px;
+  border: none;
+  background: #102c3a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.boton-mision:hover {
+  background: #244c5d;
+  transform: translateY(-2px);
+}
+
+.estado-mision {
+  margin-top: 15px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #102c3a;
+}
+
+.resultado-mision {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #102c3a;
+}
+
+/* Resumen del progreso */
+
+.resumen-avance {
+  margin: 35px 0;
+  padding: 24px;
+  border-left: 5px solid #4a806b;
+  background: #fffdf6;
+  color: #102c3a;
+}
+
+.resumen-avance strong {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.resumen-avance p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+
+/* =====================================
+   JUEGAPRENDEUMG - PANTALLA DE JUEGOS
+===================================== */
+
+.zona-principal > .juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  padding: 45px 35px 70px;
+  box-sizing: border-box;
+}
+
+.juego .boton-volver {
+  align-self: flex-start;
+  width: auto;
+  margin-bottom: 25px;
+}
+
+.juego .juego-panel {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #fffdf6;
+  border: 2px solid #102c3a;
+  box-shadow: 9px 9px 0 #f4b942;
+  box-sizing: border-box;
+}
+
+.juego .juego-etiqueta {
+  display: block;
+  color: #4a806b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.juego .juego-progreso {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.juego .barra-progreso {
+  width: 100%;
+  height: 10px;
+  margin-bottom: 35px;
+  background: #e8e3d5;
+  overflow: hidden;
+}
+
+.juego .barra-progreso > div {
+  height: 100%;
+  background: #4a806b;
+  transition: width 0.3s;
+}
+
+.juego .juego-panel h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  color: #102c3a;
+  line-height: 1.3;
+  margin: 0 0 30px;
+}
+
+.juego .opciones-juego {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.juego .opciones-juego button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  padding: 16px 20px;
+  background: #f5f1e6;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #102c3a;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.juego .opciones-juego button:hover:not(:disabled) {
+  background: #e8e3d5;
+}
+
+.juego .opciones-juego button span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  background: #e8e3d5;
+  font-weight: 800;
+}
+
+.juego .opciones-juego button.correcta {
+  background: #cce8d7;
+  border-color: #4a806b;
+}
+
+.juego .opciones-juego button.incorrecta {
+  background: #f9c9bf;
+  border-color: #f26b4f;
+}
+
+.juego .opciones-juego button:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.juego .retroalimentacion {
+  margin: 15px 0;
+  padding: 16px;
+  background: #e8e3d5;
+  font-weight: 700;
+  color: #102c3a;
+}
+
+.juego .juego-panel > .boton-principal {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: 17px 24px;
+  background: #f4b942;
+  color: #102c3a;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.juego .juego-panel > .boton-principal:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.juego .resultado-juego {
+  text-align: center;
+}
+
+.juego .resultado-juego h1 {
+  font-size: 40px;
+  color: #102c3a;
+}
+
+.juego .trofeo {
+  font-size: 75px;
+  margin: 20px 0;
+}
+
+.juego .nota {
+  display: block;
+  margin: 20px 0;
+  font-size: 60px;
+  color: #4a806b;
+}
+
+@media (max-width: 700px) {
+  .zona-principal > .juego {
+    padding: 25px 16px 50px;
+  }
+
+  .juego .juego-panel {
+    padding: 24px 18px;
+  }
+
+  .juego .juego-progreso {
+    flex-wrap: wrap;
+  }
+}
