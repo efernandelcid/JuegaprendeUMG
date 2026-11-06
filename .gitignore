@@ -7,3 +7,10 @@ dist/
 .DS_Store
 backend/routes/*.respaldo-*.js
 frontend/src/*.respaldo-*.jsx
+
+# Seguridad
+.env
+.env.*
+!.env.example
+node_modules/
+**/node_modules/

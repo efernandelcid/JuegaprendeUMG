@@ -286,6 +286,21 @@ app.post('/api/resultados', async (req, res) => {
 });
 
 // ==========================================
+// FRONTEND REACT PARA AZURE
+// ==========================================
+
+const path = require('node:path');
+
+const frontendPath = path.join(__dirname, 'public');
+
+app.use(express.static(frontendPath));
+
+// Mostrar React en rutas que no pertenecen a la API
+app.get('/{*ruta}', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
+// ==========================================
 // INICIAR SERVIDOR
 // ==========================================
 
